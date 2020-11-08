@@ -1,5 +1,6 @@
 bin/
 .vs/
 obj/
+packeges/
 .user
 .exe
