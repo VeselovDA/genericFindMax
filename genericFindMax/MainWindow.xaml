@@ -1,12 +1,38 @@
 ﻿<Window x:Class="genericFindMax.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:genericFindMax"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Max" Height="331.6" Width="500.8"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="Aquamarine"
+     FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
-        
+
+        <DataGrid x:Name="dgGeneration" HorizontalAlignment="Left" Height="auto" Margin="305,0,0,0" VerticalAlignment="Top" Width="auto">
+
+
+
+
+        </DataGrid>
+        <Label Content="N=" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="32"/>
+        <TextBox x:Name="textN" HorizontalAlignment="Left" Height="22" Margin="47,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="3"/>
+        <CheckBox x:Name="checkMutation" Content="Мутации" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="findMax" Content="Найти максимум" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="157" Height="35" />
+        <Image HorizontalAlignment="Left" Height="64" Margin="22,10,0,0" VerticalAlignment="Top" Width="145" Source="images/F.png"/>
+        <Label Content="Отрезок: от" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textX0" HorizontalAlignment="Left" Height="22" Margin="89,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" Text="0"/>
+        <Label Content="до" HorizontalAlignment="Left" Margin="133,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textX1" HorizontalAlignment="Left" Height="22" Margin="166,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" Text="31"/>
+        <TextBox x:Name="result" HorizontalAlignment="Left" Height="22" Margin="10,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Visibility="Hidden"/>
+        <Button x:Name="resetBtn" Content="Сброс" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="112" Height="35" />
+
     </Grid>
 </Window>
