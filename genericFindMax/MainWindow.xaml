@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:genericFindMax"
         mc:Ignorable="d"
-        Title="Max" Height="331.6" Width="535.865"
+        Title="Max" Height="369.2" Width="644.665"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
      TextElement.FontWeight="Regular"
@@ -16,8 +16,8 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
 
-        <DataGrid x:Name="dgGeneration" HorizontalAlignment="Left" Height="auto" Margin="305,10,0,0" VerticalAlignment="Top" Width="auto" RenderTransformOrigin="0.602,1.077">
-            <DataGrid.Columns></DataGrid.Columns>
+        <DataGrid x:Name="dgGeneration" HorizontalAlignment="Left" Height="auto" Margin="305,10,0,0" VerticalAlignment="Top" Width="auto" RenderTransformOrigin="0.602,1.077" IsReadOnly="True" MaxHeight="285">
+            
 
         </DataGrid>
         <Button x:Name="findMax" Content="Найти максимум" HorizontalAlignment="Left" Margin="16,51,0,0" VerticalAlignment="Top" Width="157" Height="35" Click="findMax_Click" />
