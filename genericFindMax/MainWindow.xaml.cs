@@ -25,6 +25,7 @@ namespace genericFindMax
         int startRange;// начало диапозона
         int endRange;// конец диапозона
         int count = 0;// счетчик сбросов
+        //bool Id = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,12 +36,22 @@ namespace genericFindMax
 
         private void findMax_Click(object sender, RoutedEventArgs e)
         {
-            Crossing crossing = new Crossing(dgList.Last());
-            dgList.Add(crossing.startCrossing());
+            for (int i = 0; i < 5; i++)
+            {
+                Crossing crossing = new Crossing(dgList.Last());
+                dgList.Add(crossing.startCrossing());
+            }
+            
+            dgList.Add(dgList.Last().mutation());
+           // dgGeneration.RowBackground = Brushes.Red;
+            /*var row=dgGeneration.ItemContainerGenerator.ContainerFromIndex(1) as DataGrid;
+            row.Background = Brushes.Red;*/
+
 
 
 
         }
+      
 
         private void resetBtn_Click(object sender, RoutedEventArgs e)
         {
