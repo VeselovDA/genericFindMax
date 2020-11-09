@@ -12,6 +12,7 @@ namespace genericFindMax
         public int X1 { get; set; }
         public int X2 { get; set; }
         public int X3 { get; set; }
+       
 
         private Random random = new Random();
 
@@ -29,11 +30,13 @@ namespace genericFindMax
         private void createFirstGeneration(int start, int end)
         {
             int interval = (end - start)/4;
-            X0 = random.Next(start, end/4);
+            X0 = random.Next(start, end/4+ start);
             X1 = X0 + interval;
             X2 = X1 + interval;
             X3 = X2 + interval;
         }
+        
+        
 
     }
 }
