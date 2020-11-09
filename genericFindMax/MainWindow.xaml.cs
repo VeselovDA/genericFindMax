@@ -24,7 +24,7 @@ namespace genericFindMax
         ObservableCollection<Generation> dgList = new ObservableCollection<Generation>();//коллекция для таблицы
         int startRange;// начало диапозона
         int endRange;// конец диапозона
-        int N;// переменная N(+ вариант)
+        int count = 0;// счетчик сбросов
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +35,10 @@ namespace genericFindMax
 
         private void findMax_Click(object sender, RoutedEventArgs e)
         {
+            Crossing crossing = new Crossing(dgList.Last());
+            dgList.Add(crossing.startCrossing());
+
+
 
         }
 
@@ -44,7 +48,7 @@ namespace genericFindMax
             {
                 startRange = Convert.ToInt32(textStartRange.Text);
                 endRange= Convert.ToInt32(textEndRange.Text);
-                N= Convert.ToInt32(textN.Text);
+                
             }
             catch(Exception)
             {
@@ -59,6 +63,16 @@ namespace genericFindMax
             //dgGeneration.ItemsSource.Cle;
             Generation generation = new Generation(startRange, endRange);
             dgList.Add(generation);
+
+        }
+
+        private void TextChanged(object sender, TextChangedEventArgs e)
+        {
+             count = 0;
+            if(count==0)
+             count++; 
+            else
+            resetBtn_Click(resetBtn, null);
 
         }
     }
