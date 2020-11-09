@@ -57,8 +57,11 @@ namespace genericFindMax
         {
             try
             {
-                startRange = Convert.ToInt32(textStartRange.Text);
-                endRange= Convert.ToInt32(textEndRange.Text);
+                if (textStartRange.Text != "" && textStartRange.Text != "")
+                {
+                    startRange = Convert.ToInt32(textStartRange.Text);
+                    endRange = Convert.ToInt32(textEndRange.Text);
+                }
                 
             }
             catch(Exception)
@@ -79,7 +82,7 @@ namespace genericFindMax
 
         private void TextChanged(object sender, TextChangedEventArgs e)
         {
-             count = 0;
+            
             if(count==0)
              count++; 
             else
