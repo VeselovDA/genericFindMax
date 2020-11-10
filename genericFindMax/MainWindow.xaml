@@ -16,17 +16,22 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
 
-        <DataGrid x:Name="dgGeneration" HorizontalAlignment="Left" Height="auto" Margin="305,10,0,0" VerticalAlignment="Top" Width="auto" RenderTransformOrigin="0.602,1.077" IsReadOnly="True" MaxHeight="285">
+        <DataGrid x:Name="dgGeneration" HorizontalAlignment="Left" Height="auto" Margin="305,10,0,0" VerticalAlignment="Top" Width="auto" 
+                  RenderTransformOrigin="0.602,1.077" IsReadOnly="True" MaxHeight="285"
+                 
+                  >
             
 
         </DataGrid>
-        <Button x:Name="findMax" Content="Найти максимум" HorizontalAlignment="Left" Margin="16,51,0,0" VerticalAlignment="Top" Width="157" Height="35" Click="findMax_Click" />
+        <Button x:Name="stepBtn" Content="Шаг" HorizontalAlignment="Left" Margin="16,91,0,0" VerticalAlignment="Top" Width="131" Height="35" Click="stepBtn_Click" />
         <Label Content="Отрезок: от" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textStartRange" HorizontalAlignment="Left" Height="22" Margin="95,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" Text="0" TextChanged="TextChanged"/>
         <Label Content="до" HorizontalAlignment="Left" Margin="133,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.598,1.158"/>
         <TextBox x:Name="textEndRange" HorizontalAlignment="Left" Height="22" Margin="173,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" Text="31" TextChanged="TextChanged" />
         <TextBox x:Name="result" HorizontalAlignment="Left" Height="22" Margin="10,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Visibility="Hidden"/>
-        <Button x:Name="resetBtn" Content="Сброс" HorizontalAlignment="Left" Margin="16,106,0,0" VerticalAlignment="Top" Width="112" Height="35" Click="resetBtn_Click" />
+        <Button x:Name="resetBtn" Content="Сброс" HorizontalAlignment="Left" Margin="16,131,0,0" VerticalAlignment="Top" Width="112" Height="35" Click="resetBtn_Click" />
+        <Button x:Name="findMax" Content="Найти максимум" HorizontalAlignment="Left" Margin="16,51,0,0" VerticalAlignment="Top" Width="157" Height="35" Click="findMax_Click" />
+        <Label x:Name="valueLabel" Content="" HorizontalAlignment="Left" Margin="16,171,0,0" VerticalAlignment="Top" Width="190" Foreground="#673ab7" FontSize="14"/>
 
     </Grid>
 </Window>
