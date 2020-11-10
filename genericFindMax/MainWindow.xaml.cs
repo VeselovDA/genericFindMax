@@ -34,7 +34,7 @@ namespace genericFindMax
 
         }
 
-        private void findMax_Click(object sender, RoutedEventArgs e)
+        private void stepBtn_Click(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < 5; i++)
             {
@@ -43,13 +43,6 @@ namespace genericFindMax
             }
             
             dgList.Add(dgList.Last().mutation());
-           // dgGeneration.RowBackground = Brushes.Red;
-            /*var row=dgGeneration.ItemContainerGenerator.ContainerFromIndex(1) as DataGrid;
-            row.Background = Brushes.Red;*/
-
-
-
-
         }
       
 
@@ -87,6 +80,35 @@ namespace genericFindMax
              count++; 
             else
             resetBtn_Click(resetBtn, null);
+
+        }
+
+        private void findMax_Click(object sender, RoutedEventArgs e)
+        {
+            
+            int count = 0;
+            while (true)
+            { 
+            
+                for (int i = 0; i < 5; i++)
+                {
+                    Crossing crossing = new Crossing(dgList.Last());
+                    dgList.Add(crossing.startCrossing());
+                    if (dgList.Last().X0 == dgList.Last().X1 && dgList.Last().X0 == dgList.Last().X2 && dgList.Last().X0 == dgList.Last().X3)
+                        count++;
+                    else count = 0;
+                    if (count == 3)
+                        break; 
+                        
+                }
+                dgList.Add(dgList.Last().mutation());
+                if (count == 3)
+                {
+                    valueLabel.Content = "Максимум: " + dgList[dgList.Count - 2].X0; break;
+                }
+            }
+
+            
 
         }
     }
