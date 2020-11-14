@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,7 @@ namespace genericFindMax
 
         private void resetBtn_Click(object sender, RoutedEventArgs e)
         {
+            valueLabel.Content = " ";
             try
             {
                 if (textStartRange.Text != "" && textStartRange.Text != "")
@@ -76,7 +78,7 @@ namespace genericFindMax
         private void TextChanged(object sender, TextChangedEventArgs e)
         {
             
-            if(count==0)
+            if(count<2)
              count++; 
             else
             resetBtn_Click(resetBtn, null);
@@ -111,5 +113,6 @@ namespace genericFindMax
             
 
         }
+       
     }
 }
